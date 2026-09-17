@@ -31,7 +31,7 @@ class ScanConfig:
     wordlist: List[str]
     out_dir: str = "captures/"
     log_file: str = "captures/hits.log"
-    sentinel: str = "prompttesta.html"
+    sentinel: str = "__pkhunter_probe__.html"
     walk_parents: bool = False
     timeout: float = 15.0
     workers: int = 20

@@ -34,8 +34,8 @@ def _build_parser() -> argparse.ArgumentParser:
                       help="directory for downloaded artifacts (default: captures/)")
     scan.add_argument("--log", default="captures/hits.log",
                       help="hit log: date/URL/filename (default: captures/hits.log)")
-    scan.add_argument("--sentinel", default="prompttesta.html",
-                      help="decoy path for the catch-all guard")
+    scan.add_argument("--sentinel", default="__pkhunter_probe__.html",
+                      help="decoy path for the catch-all guard (should not exist on a real host)")
     scan.add_argument("--parent", action="store_true",
                       help="also probe each parent directory of every URL")
     scan.add_argument("--timeout", type=float, default=15.0,

@@ -5,7 +5,7 @@ Defensive scanner that hunts **exposed phishing-kit exfiltration files** — the
 what they steal. Point it at a suspected kit URL and it finds those artifacts so
 defenders can **identify victims and drive takedowns**.
 
-![demo](demo/demo.gif)
+![demo](demo/demo.svg)
 
 > ⚠️ **Authorized use only.** Run this against infrastructure you're allowed to
 > investigate. Captured data is victim data — handle it under your org's rules,

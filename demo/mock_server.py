@@ -14,10 +14,10 @@ FAKE = b"<!-- demo fixture: fake captured data, contains no real victim info -->
 # Planted artifacts under /kit/. The sentinel path is deliberately ABSENT (404),
 # so the host is not treated as catch-all.
 ARTIFACTS = {
-    "/kit/fucked/FULLZ.html": FAKE,
-    "/kit/captured.txt": FAKE,
+    "/kit/results.txt": FAKE,
+    "/kit/fullz.txt": FAKE,
+    "/kit/cards.txt": FAKE,
     "/kit/visits.txt": FAKE,
-    "/kit/nickel/fucked/SMS.html": FAKE,
 }
 
 
