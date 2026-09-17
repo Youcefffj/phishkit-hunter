@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phishkit-hunter"
+version = "0.1.0"
+description = "Defensive scanner that hunts exposed phishing-kit exfiltration files."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Youcefffj" }]
+keywords = ["security", "phishing", "threat-intelligence", "dfir", "scanner"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Security",
+]
+dependencies = ["requests>=2.31"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+pkhunter = "pkhunter.cli:main"
+
+[project.urls]
+Repository = "https://github.com/Youcefffj/vaccumBNP"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

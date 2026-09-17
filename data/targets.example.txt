@@ -1,0 +1,8 @@
+# Target list template for `pkhunter scan`.
+# One base URL per line — a directory where a phishing kit is suspected.
+# Lines starting with '#' are ignored.
+#
+# Copy this file to data/targets.txt and add real URLs.
+# data/targets.txt is git-ignored on purpose: never commit live targets.
+#
+# https://compromised-host.example/path/to/kit/
