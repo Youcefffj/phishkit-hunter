@@ -6,7 +6,9 @@ set -e
 cd "$(dirname "$0")/.."          # repo root
 
 mkdir -p captures
-rm -f captures/hits.log
+# Clear only previous demo captures (localhost artifacts + log) so each run
+# shows fresh hits — never touches real captures from other hosts.
+rm -f captures/http127.0.0.1*kit* captures/hits.log 2>/dev/null || true
 
 # Free the port in case a previous run left a server behind.
 if command -v lsof >/dev/null 2>&1; then

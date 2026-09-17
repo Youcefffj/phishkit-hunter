@@ -1,5 +1,9 @@
-{"version": 2, "width": 82, "height": 51, "timestamp": 1789606460, "env": {"SHELL": "/bin/zsh", "TERM": "xterm-256color"}}
-[1.285265, "o", "$ pkhunter scan --targets demo/targets.txt\r\n"]
-[2.892051, "o", "\r\nDone. 0 artifact(s) captured from 40 request(s); 0 catch-all host(s) skipped. Output in captures/\r\n"]
-[5.908594, "o", "\r\n$ cat captures/hits.log\r\n"]
-[7.424719, "o", "cat: captures/hits.log: No such file or directory\r\n"]
+{"version": 2, "width": 82, "height": 51, "timestamp": 1789607013, "env": {"SHELL": "/bin/zsh", "TERM": "xterm-256color"}}
+[1.286651, "o", "$ pkhunter scan --targets demo/targets.txt\r\n"]
+[2.890302, "o", "hit: http://127.0.0.1:8000/kit/results.txt\r\n"]
+[2.903379, "o", "hit: http://127.0.0.1:8000/kit/fullz.txt\r\n"]
+[2.904588, "o", "hit: http://127.0.0.1:8000/kit/visits.txt\r\n"]
+[2.904763, "o", "hit: http://127.0.0.1:8000/kit/cards.txt\r\n"]
+[2.905269, "o", "\r\nDone. 4 artifact(s) captured from 40 request(s); 0 catch-all host(s) skipped. Output in captures/\r\n"]
+[5.924184, "o", "\r\n$ cat captures/hits.log\r\n"]
+[7.43962, "o", "2026-09-17 03:03:36\thttp://127.0.0.1:8000/kit/results.txt\thttp127.0.0.18000kitresults.txt\r\n2026-09-17 03:03:36\thttp://127.0.0.1:8000/kit/fullz.txt\thttp127.0.0.18000kitfullz.txt\r\n2026-09-17 03:03:36\thttp://127.0.0.1:8000/kit/visits.txt\thttp127.0.0.18000kitvisits.txt\r\n2026-09-17 03:03:36\thttp://127.0.0.1:8000/kit/cards.txt\thttp127.0.0.18000kitcards.txt\r\n"]
