@@ -1,5 +1,5 @@
-{"version": 2, "width": 100, "height": 51, "timestamp": 1789606290, "env": {"SHELL": "/bin/zsh", "TERM": "xterm-256color"}}
-[2.027232, "o", "$ pkhunter scan --targets demo/targets.txt\r\n"]
-[3.643652, "o", "\r\nDone. 0 artifact(s) captured from 40 request(s); 0 catch-all host(s) skipped. Output in captures/\r\n"]
-[6.659067, "o", "\r\n$ cat captures/hits.log\r\n"]
-[8.175299, "o", "cat: captures/hits.log: No such file or directory\r\n"]
+{"version": 2, "width": 82, "height": 51, "timestamp": 1789606460, "env": {"SHELL": "/bin/zsh", "TERM": "xterm-256color"}}
+[1.285265, "o", "$ pkhunter scan --targets demo/targets.txt\r\n"]
+[2.892051, "o", "\r\nDone. 0 artifact(s) captured from 40 request(s); 0 catch-all host(s) skipped. Output in captures/\r\n"]
+[5.908594, "o", "\r\n$ cat captures/hits.log\r\n"]
+[7.424719, "o", "cat: captures/hits.log: No such file or directory\r\n"]

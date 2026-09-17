@@ -5,11 +5,33 @@
 set -e
 cd "$(dirname "$0")/.."          # repo root
 
+mkdir -p captures
 rm -f captures/hits.log
+
+# Free the port in case a previous run left a server behind.
+if command -v lsof >/dev/null 2>&1; then
+    lsof -ti tcp:8000 | xargs kill 2>/dev/null || true
+fi
+
 python demo/mock_server.py >/dev/null 2>&1 &
 SERVER=$!
 trap 'kill "$SERVER" 2>/dev/null' EXIT
-sleep 1
+
+# Wait until the mock host actually accepts connections before scanning.
+for _ in $(seq 1 40); do
+    if python - <<'PY' 2>/dev/null
+import socket, sys
+s = socket.socket(); s.settimeout(0.3)
+try:
+    s.connect(("127.0.0.1", 8000)); s.close()
+except Exception:
+    sys.exit(1)
+PY
+    then
+        break
+    fi
+    sleep 0.2
+done
 
 pause() { sleep "${1:-1.5}"; }
 
